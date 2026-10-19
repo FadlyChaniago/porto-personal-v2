@@ -1,0 +1,42 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; background: var(--surface-100); }
+  .ground { fill: var(--surface-100); }
+  .ink-block { fill: var(--ink); }
+  .primary-block { fill: var(--primary); }
+  .secondary-block { fill: var(--secondary); }
+  .accent-block { fill: var(--accent); }
+  .rule { stroke: var(--surface-100); stroke-width: 1; }
+  .name { font-family: var(--font-serif); font-size: 56px; font-weight: 500; fill: var(--ink); }
+  .tagline { font-family: var(--font-sans); font-size: 13px; fill: var(--ink-muted); }
+</style>
+</head>
+<body>
+<!--
+  Derivation
+  Blocks: ink 192x288 + primary 288x160 + secondary 144x128 + accent 144x128 (tokens ink, primary, secondary, accent); about a third of the cover.
+  Arrangement: a square modular stack bleeding off the top and right edges, starting at x=480 so nothing crosses the 440px name zone.
+  Pattern: five hairline rules in surface-100 across the blocks. The portfolio is editorial (serif display) with a technical edge, so a few rules fit it better than a dot grid.
+  Steps and radii: 48px and 96px rule rhythm; radius 0 because the cover is square-cornered like the blocks it shows.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="288" viewBox="0 0 960 288" role="img" aria-label="Portfolio Design System cover">
+  <rect class="ground" x="0" y="0" width="960" height="288"/>
+  <rect class="ink-block" x="480" y="0" width="192" height="288"/>
+  <rect class="primary-block" x="672" y="0" width="288" height="160"/>
+  <rect class="secondary-block" x="672" y="160" width="144" height="128"/>
+  <rect class="accent-block" x="816" y="160" width="144" height="128"/>
+  <line class="rule" x1="480" y1="48" x2="960" y2="48"/>
+  <line class="rule" x1="480" y1="96" x2="960" y2="96"/>
+  <line class="rule" x1="480" y1="144" x2="960" y2="144"/>
+  <line class="rule" x1="480" y1="208" x2="960" y2="208"/>
+  <line class="rule" x1="480" y1="256" x2="960" y2="256"/>
+  <text class="name" x="40" y="170">Portfolio</text>
+  <text class="name" x="40" y="223">Design System</text>
+  <text class="tagline" x="40" y="256">Quiet editorial tokens for a portfolio built to be read.</text>
+</svg>
+</body>
+</html>
