@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function () {
+      document.documentElement.classList.add("js");
+      var theme;
+      try { theme = localStorage.getItem("theme"); } catch (e) { theme = null; }
+      if (theme !== "light" && theme !== "dark") {
+        theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-bs-theme", theme);
+    })();
+  </script>
+
+  <title>Blog · Muhammad Fadly</title>
+  <meta name="description" content="Technical notes, work lessons and reflections from building backend services, data pipelines and monitoring tools.">
+  <link rel="canonical" href="https://example.com/blog/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Blog · Muhammad Fadly">
+  <meta property="og:description" content="Technical notes, work lessons and reflections.">
+  <meta property="og:url" content="https://example.com/blog/">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400..800&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar navbar-expand-lg p-0 h-100" aria-label="Main">
+      <div class="container site-container h-100 d-flex align-items-center">
+        <a class="brand" href="../index.html">Muhammad Fadly</a>
+
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme">
+          <i class="bi bi-moon-stars" aria-hidden="true"></i>
+        </button>
+
+        <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="siteNav">
+          <ul class="navbar-nav-site">
+            <li><a class="nav-link-site" href="../index.html">Home</a></li>
+            <li><a class="nav-link-site" href="../index.html#about">About</a></li>
+            <li><a class="nav-link-site" href="../index.html#projects">Projects</a></li>
+            <li><a class="nav-link-site" href="../index.html#skills">Expertise</a></li>
+            <li><a class="nav-link-site" href="../index.html#journey">Journey</a></li>
+            <li><a class="nav-link-site active" href="index.html" aria-current="page">Blog</a></li>
+            <li><a class="nav-link-site" href="../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="container site-container">
+      <section class="blog-intro">
+        <p class="eyebrow">Blog</p>
+        <h1 class="display-section">Notes from building, debugging and learning.</h1>
+        <p class="lead-text">Technical notes, lessons from real work and occasional reflections. This is where I document what I learn and share what worked.</p>
+      </section>
+
+      <div class="toolbar">
+        <div class="filters" id="category-filters" role="group" aria-label="Filter by category"></div>
+        <div>
+          <label for="search" class="visually-hidden">Search articles</label>
+          <input class="search-input" id="search" type="search" placeholder="Search articles" autocomplete="off">
+        </div>
+      </div>
+
+      <p class="result-count" id="result-count" role="status" aria-live="polite"></p>
+
+      <div id="featured"></div>
+
+      <div id="article-list" class="pb-5" aria-label="Articles"></div>
+
+      <div class="empty-state" id="empty" hidden>
+        <p class="mb-0">No articles match this search yet.</p>
+        <button class="btn-ghost-brand" id="clear-filters" type="button">Clear search and filters</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer hairline-top">
+    <div class="container site-container d-flex flex-column flex-md-row justify-content-between gap-3">
+      <p class="mb-0">Muhammad Fadly · Programmer, data analyst and automation developer.</p>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="https://github.com/FadlyChaniago" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:you@example.com">Email</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container site-container mt-4">
+      <p class="mb-0">© <span id="year">2026</span> Muhammad Fadly.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="../assets/js/data/articles.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/blog.js" defer></script>
+</body>
+</html>

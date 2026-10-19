@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    /* Set the theme before first paint: explicit choice first, then the system setting. */
+    (function () {
+      document.documentElement.classList.add("js");
+      var theme;
+      try { theme = localStorage.getItem("theme"); } catch (e) { theme = null; }
+      if (theme !== "light" && theme !== "dark") {
+        theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-bs-theme", theme);
+    })();
+  </script>
+
+  <title>Muhammad Fadly · Programmer, Data Analyst, Automation Developer</title>
+  <meta name="description" content="Portfolio of Muhammad Fadly: backend development, SQL and data analysis, workflow automation and monitoring dashboards.">
+  <link rel="canonical" href="https://example.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Muhammad Fadly · Portfolio">
+  <meta property="og:description" content="Backend development, SQL and data analysis, workflow automation and monitoring dashboards.">
+  <meta property="og:url" content="https://example.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400..800&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Muhammad Fadly",
+    "jobTitle": "Programmer, Data Analyst, Automation Developer",
+    "url": "https://example.com/",
+    "sameAs": ["https://github.com/FadlyChaniago"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ Header ============ -->
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar navbar-expand-lg p-0 h-100" aria-label="Main">
+      <div class="container site-container h-100 d-flex align-items-center">
+        <a class="brand" href="#top">Muhammad Fadly</a>
+
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme">
+          <i class="bi bi-moon-stars" aria-hidden="true"></i>
+        </button>
+
+        <button class="navbar-toggler ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="siteNav">
+          <ul class="navbar-nav-site">
+            <li><a class="nav-link-site" href="#top" data-spy-link>Home</a></li>
+            <li><a class="nav-link-site" href="#about" data-spy-link>About</a></li>
+            <li><a class="nav-link-site" href="#projects" data-spy-link>Projects</a></li>
+            <li><a class="nav-link-site" href="#skills" data-spy-link>Expertise</a></li>
+            <li><a class="nav-link-site" href="#journey" data-spy-link>Journey</a></li>
+            <li><a class="nav-link-site" href="blog/index.html">Blog</a></li>
+            <li><a class="nav-link-site" href="#contact" data-spy-link>Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ Hero ============ -->
+    <section class="hero" id="top">
+      <div class="container site-container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <p class="eyebrow reveal">Programmer · Data Analyst · Automation Developer</p>
+            <h1 class="display-hero reveal">Turning technical problems into practical solutions.</h1>
+            <p class="lead-text reveal">I build backend services, data pipelines and monitoring tools, and I write down what I learn along the way.</p>
+            <div class="d-flex flex-wrap gap-3 reveal">
+              <a class="btn-brand" href="#projects">Explore projects <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              <a class="btn-ghost-brand" href="blog/index.html">Read the blog</a>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="hero-visual" aria-hidden="true">
+              <div class="hv hv-ink" data-parallax="0.04"></div>
+              <div class="hv hv-primary" data-parallax="0.09"></div>
+              <div class="hv hv-secondary" data-parallax="0.14"></div>
+              <div class="hv hv-accent" data-parallax="0.06"></div>
+              <div class="hv-rule hv-rule-1" data-parallax="0.03"></div>
+              <div class="hv-rule hv-rule-2" data-parallax="0.06"></div>
+              <div class="hv-rule hv-rule-3" data-parallax="0.10"></div>
+              <p class="hv-caption label-mono">Portfolio · 2026</p>
+            </div>
+          </div>
+        </div>
+
+        <a class="scroll-cue" href="#about">Scroll to explore <i class="bi bi-arrow-down" aria-hidden="true"></i></a>
+      </div>
+    </section>
+
+    <!-- ============ About ============ -->
+    <section class="section hairline-top" id="about">
+      <div class="container site-container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <p class="section-label reveal">01 — About</p>
+            <h2 class="display-section mt-3 reveal">Working between code, data and operations.</h2>
+          </div>
+          <div class="col-lg-7 offset-lg-1 about-body reveal">
+            <p>I work as a programmer who also handles ATM operations and monitoring. My days mix backend development, Python automation, dashboards and database work, with the operational questions behind them: availability, reliability and incidents.</p>
+            <p>I start with the evidence, then choose the simplest solution that will still hold up in production. I care about code that someone else can maintain after me.</p>
+            <blockquote class="pull-quote">Simple first. Measure before optimising. Write down what changed.</blockquote>
+            <ul class="interest-list">
+              <li><i class="bi bi-database" aria-hidden="true"></i> Databases and SQL</li>
+              <li><i class="bi bi-gear" aria-hidden="true"></i> Workflow automation</li>
+              <li><i class="bi bi-graph-up" aria-hidden="true"></i> Monitoring and reporting</li>
+              <li><i class="bi bi-terminal" aria-hidden="true"></i> Linux and deployment</li>
+            </ul>
+            <a class="link-plain" href="#journey">Read my journey <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Expertise ============ -->
+    <section class="section hairline-top" id="skills">
+      <div class="container site-container">
+        <p class="section-label reveal">02 — Expertise</p>
+        <h2 class="display-section mt-3 mb-5 reveal">The tools I reach for most.</h2>
+        <div class="row g-4 g-lg-5">
+          <div class="col-sm-6 col-lg-3 reveal">
+            <div class="skill-group">
+              <h3>Programming</h3>
+              <ul class="skill-list">
+                <li><i class="bi bi-code-slash" aria-hidden="true"></i> Python</li>
+                <li><i class="bi bi-code-slash" aria-hidden="true"></i> JavaScript and Node.js</li>
+                <li><i class="bi bi-code-slash" aria-hidden="true"></i> Laravel and PHP</li>
+                <li><i class="bi bi-code-slash" aria-hidden="true"></i> Web development</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 reveal">
+            <div class="skill-group">
+              <h3>Data and databases</h3>
+              <ul class="skill-list">
+                <li><i class="bi bi-table" aria-hidden="true"></i> SQL and query tuning</li>
+                <li><i class="bi bi-table" aria-hidden="true"></i> PostgreSQL</li>
+                <li><i class="bi bi-table" aria-hidden="true"></i> MySQL and MariaDB</li>
+                <li><i class="bi bi-table" aria-hidden="true"></i> Data analysis and reporting</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 reveal">
+            <div class="skill-group">
+              <h3>Automation</h3>
+              <ul class="skill-list">
+                <li><i class="bi bi-arrow-repeat" aria-hidden="true"></i> Workflow automation</li>
+                <li><i class="bi bi-arrow-repeat" aria-hidden="true"></i> ETL and data processing</li>
+                <li><i class="bi bi-chat-dots" aria-hidden="true"></i> WhatsApp, Telegram and email bots</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 reveal">
+            <div class="skill-group">
+              <h3>Monitoring and infrastructure</h3>
+              <ul class="skill-list">
+                <li><i class="bi bi-activity" aria-hidden="true"></i> Monitoring dashboards</li>
+                <li><i class="bi bi-activity" aria-hidden="true"></i> SLA and incident tracking</li>
+                <li><i class="bi bi-hdd-network" aria-hidden="true"></i> Linux, Docker and Git</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Selected projects ============ -->
+    <section class="section hairline-top" id="projects">
+      <div class="container site-container">
+        <p class="section-label reveal">03 — Selected projects</p>
+        <h2 class="display-section mt-3 reveal">Work that started with a real problem.</h2>
+        <p class="lead-text mt-3 mb-0 reveal">These case studies are illustrative placeholders. Replace the wording and details with your own before sharing.</p>
+
+        <!-- Project 1: featured, media left -->
+        <article class="project project-row reveal">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6 project-media-col">
+              <div class="project-media">
+                <p class="placeholder-note label-mono">Placeholder visual</p>
+                <div class="bars" aria-hidden="true">
+                  <span style="--h: 38%"></span><span style="--h: 52%"></span><span style="--h: 44%"></span>
+                  <span style="--h: 70%"></span><span style="--h: 58%"></span><span style="--h: 82%"></span>
+                  <span style="--h: 64%"></span><span style="--h: 90%"></span><span style="--h: 76%"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 project-text">
+              <span class="project-num label-mono">01 · Featured</span>
+              <h3 class="project-title heading-lg">Data Monitoring Dashboard</h3>
+              <p>A single view for availability and incidents, so operators stop checking several spreadsheets every morning.</p>
+              <dl>
+                <div><dt>Problem</dt><dd>Status was spread across exports, so trends were noticed late.</dd></div>
+                <div><dt>Approach</dt><dd>A scheduled Python job loads and cleans data into PostgreSQL. SQL views feed trend charts and an alert list.</dd></div>
+              </dl>
+              <ul class="tag-list mt-4">
+                <li>Python</li><li>PostgreSQL</li><li>SQL</li><li>Dashboards</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: media right -->
+        <article class="project project-row reverse reveal">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6 project-media-col">
+              <div class="project-media">
+                <p class="placeholder-note label-mono">Placeholder visual</p>
+                <div class="bars" aria-hidden="true">
+                  <span style="--h: 66%"></span><span style="--h: 60%"></span><span style="--h: 72%"></span>
+                  <span style="--h: 55%"></span><span style="--h: 68%"></span><span style="--h: 62%"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 project-text">
+              <span class="project-num label-mono">02</span>
+              <h3 class="project-title heading-lg">Automated Reporting Workflow</h3>
+              <p>A scheduled job builds the daily summary and sends it to the team, replacing a manual copy-and-paste routine.</p>
+              <dl>
+                <div><dt>Problem</dt><dd>Daily reports took hours to assemble by hand, and mistakes crept in.</dd></div>
+                <div><dt>Approach</dt><dd>Idempotent queries, a template, and an email or chat bot. Failures notify; successes stay quiet.</dd></div>
+              </dl>
+              <ul class="tag-list mt-4">
+                <li>Python</li><li>SQL</li><li>Email</li><li>Telegram bot</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- Projects 3 and 4: compact row -->
+        <div class="row g-4 mt-0">
+          <div class="col-md-6">
+            <article class="project project-compact h-100 reveal" style="padding-top: 32px; padding-bottom: 32px;">
+              <span class="project-num label-mono">03</span>
+              <h3 class="project-title">SQL Analysis and Optimization</h3>
+              <p class="mb-3">Reading slow reports with EXPLAIN ANALYZE, adding a composite index, and rewriting one query for clarity.</p>
+              <ul class="tag-list"><li>PostgreSQL</li><li>Indexes</li><li>EXPLAIN</li></ul>
+            </article>
+          </div>
+          <div class="col-md-6">
+            <article class="project project-compact h-100 reveal" style="padding-top: 32px; padding-bottom: 32px;">
+              <span class="project-num label-mono">04</span>
+              <h3 class="project-title">Internal Web Application</h3>
+              <p class="mb-3">A small Laravel tool for tracking records and tickets, with role-based access and an audit trail.</p>
+              <ul class="tag-list"><li>Laravel</li><li>MySQL</li><li>Docker</li></ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Process ============ -->
+    <section class="section hairline-top" id="process">
+      <div class="container site-container">
+        <p class="section-label reveal">04 — How I approach problems</p>
+        <h2 class="display-section mt-3 mb-5 reveal">Evidence first, then the smallest fix.</h2>
+        <ol class="process-list reveal">
+          <li>
+            <span class="step-num label-mono">Step 1</span>
+            <h3>Understand the problem</h3>
+            <p>Write down what is failing, for whom, and how often.</p>
+          </li>
+          <li>
+            <span class="step-num label-mono">Step 2</span>
+            <h3>Investigate the evidence</h3>
+            <p>Read logs, query plans and real data before forming a theory.</p>
+          </li>
+          <li>
+            <span class="step-num label-mono">Step 3</span>
+            <h3>Design a practical solution</h3>
+            <p>Choose the simplest design that meets the requirement.</p>
+          </li>
+          <li>
+            <span class="step-num label-mono">Step 4</span>
+            <h3>Implement and validate</h3>
+            <p>Change one thing at a time and measure the result again.</p>
+          </li>
+          <li>
+            <span class="step-num label-mono">Step 5</span>
+            <h3>Document lessons</h3>
+            <p>Record what changed and why, so the next person starts ahead.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ Journey ============ -->
+    <section class="section hairline-top" id="journey">
+      <div class="container site-container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <p class="section-label reveal">05 — Journey</p>
+            <h2 class="display-section mt-3 reveal">Learning in public, one project at a time.</h2>
+            <p class="lead-text mt-4 reveal">Replace the bracketed placeholders with your own roles, organisations and dates.</p>
+          </div>
+          <div class="col-lg-7 offset-lg-1">
+            <ol class="timeline">
+              <li class="reveal">
+                <span class="period">[Period]</span>
+                <h3><span class="ph">[Role]</span> at <span class="ph">[Organisation]</span></h3>
+                <p>Responsibilities: <span class="ph">[ATM operations monitoring, backend automation, dashboards]</span></p>
+                <p class="learning">Key learning: <span class="ph">[one sentence]</span></p>
+              </li>
+              <li class="reveal">
+                <span class="period">[Period]</span>
+                <h3><span class="ph">[Role]</span> at <span class="ph">[Organisation]</span></h3>
+                <p>Responsibilities: <span class="ph">[Python automation, ETL, reporting]</span></p>
+                <p class="learning">Key learning: <span class="ph">[one sentence]</span></p>
+              </li>
+              <li class="reveal">
+                <span class="period">Ongoing</span>
+                <h3>Continuous learning</h3>
+                <p>Working toward a stronger foundation in software engineering, databases, distributed systems and architecture.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Writing preview ============ -->
+    <section class="section hairline-top" id="writing">
+      <div class="container site-container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <p class="section-label reveal">06 — From the blog</p>
+            <h2 class="display-section mt-3 reveal">Notes on code, data and the work around it.</h2>
+            <p class="lead-text mt-4 reveal">Technical notes, lessons from real work, and the occasional reflection. The full archive lives on its own page.</p>
+            <a class="btn-ghost-brand mt-3" href="blog/index.html">Explore all articles <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="col-lg-7 offset-lg-1" id="home-writing" aria-label="Latest articles"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Contact ============ -->
+    <section class="section contact-band" id="contact">
+      <div class="container site-container">
+        <p class="section-label reveal">07 — Contact</p>
+        <h2 class="display-section mt-3 reveal">Let’s build something useful.</h2>
+        <p class="lead-text mt-4 reveal">Open to conversations about backend work, data problems, and automation that needs to run reliably.</p>
+        <div class="contact-links reveal">
+          <a href="mailto:you@example.com"><i class="bi bi-envelope" aria-hidden="true"></i> Email me</a>
+          <a href="https://github.com/FadlyChaniago" rel="noopener"><i class="bi bi-github" aria-hidden="true"></i> GitHub</a>
+          <a href="https://www.linkedin.com/in/your-profile" rel="noopener"><i class="bi bi-linkedin" aria-hidden="true"></i> LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer hairline-top">
+    <div class="container site-container d-flex flex-column flex-md-row justify-content-between gap-4">
+      <div>
+        <p class="mb-1" style="font-family: var(--font-serif); font-size: 20px; color: var(--ink);">Muhammad Fadly</p>
+        <p class="mb-0">Programmer, data analyst and automation developer. Building practical solutions with software, data and automation.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Expertise</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="https://github.com/FadlyChaniago" rel="noopener">GitHub</a></li>
+          <li><a href="mailto:you@example.com">Email</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container site-container mt-4">
+      <p class="mb-0">© <span id="year">2026</span> Muhammad Fadly. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/js/data/articles.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
